@@ -1,34 +1,38 @@
-//Only change below JS, not the HTML
+// Select order 1 elements
+const order1Root = document.querySelector('[data-key="order1"]');
+const order1Biscuits = document.querySelector('[data-key="order1"] .biscuits dd');
+const order1Donuts = document.querySelector('[data-key="order1"] .donuts dd');
+const order1Pancakes = document.querySelector('[data-key="order1"] .pancakes dd');
+const order1Status = document.querySelector('[data-key="order1"] .status dd');
 
-const 1-root = document(order1),
-const 1-biscuits: document(biscuits),
-const 1-donuts: document(donuts),
-const 1-pancakes: document(pancakes),
-const 1-status: document(status)
+// Select order 2 elements
+const order2Root = document.querySelector('[data-key="order2"]');
+const order2Biscuits = document.querySelector('[data-key="order2"] .biscuits dd');
+const order2Donuts = document.querySelector('[data-key="order2"] .donuts dd');
+const order2Pancakes = document.querySelector('[data-key="order2"] .pancakes dd');
+const order2Status = document.querySelector('[data-key="order2"] .status dd');
 
-const 2-root = document(order2),
-const 2-biscuits: document(biscuits),
-const 2-donuts: document(donuts),
-const 2-pancakes: document(pancakes),
-const 2-status: document(status)
+// Select order 3 elements
+const order3Root = document.querySelector('[data-key="order3"]');
+const order3Biscuits = document.querySelector('[data-key="order3"] .biscuits dd');
+const order3Donuts = document.querySelector('[data-key="order3"] .donuts dd');
+const order3Pancakes = document.querySelector('[data-key="order3"] .pancakes dd');
+const order3Status = document.querySelector('[data-key="order3"] .status dd');
 
-const 3-root = document(order3),
-const 3-biscuits: document(biscuits),
-const 3-donuts: document(donuts),
-const 3-pancakes: document(pancakes),
-const 3-status: document(status)
+// Update order 1 values
+order1Biscuits.textContent = order1Root.dataset.biscuits;
+order1Donuts.textContent = order1Root.dataset.donuts;
+order1Pancakes.textContent = order1Root.dataset.pancakes;
+order1Status.textContent = order1Root.dataset.delivered === "true" ? "Delivered" : "Pending";
 
-1-biscuits= 1-root.biscuits,
-1-donuts = 1-root.donuts,
-1-pancakes = 1-root.pancakes,
-1-status = 1-root.status ? Delivered : Pending
+// Update order 2 values
+order2Biscuits.textContent = order2Root.dataset.biscuits;
+order2Donuts.textContent = order2Root.dataset.donuts;
+order2Pancakes.textContent = order2Root.dataset.pancakes;
+order2Status.textContent = order2Root.dataset.delivered === "true" ? "Delivered" : "Pending";
 
-2-biscuits= 2-root.biscuits,
-2-donuts = 2-root.donuts,
-2-pancakes = 2-root.pancakes,
-2-status = 2-root.status ? Delivered : Pending
-
-3-biscuits= 3-root.biscuits,
-3-donuts = 3-root.donuts,
-3-pancakes = 3-root.pancakes,
-3-status = 3-root.status ? Delivered : Pending
+// Update order 3 values
+order3Biscuits.textContent = order3Root.dataset.biscuits;
+order3Donuts.textContent = order3Root.dataset.donuts;
+order3Pancakes.textContent = order3Root.dataset.pancakes;
+order3Status.textContent = order3Root.dataset.delivered === "true" ? "Delivered" : "Pending";
