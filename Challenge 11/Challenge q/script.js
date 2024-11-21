@@ -58,18 +58,17 @@ const books = [
     }
 ];
 
+const items = [0, 1, 2];
+
 items.forEach((i) => {
-    const book = books[i]; 
-    const status = STATUS_MAP[book.status]; 
-    
+    const book = books[i]; // Get the current book object
+    const status = STATUS_MAP[book.status]; // Get the status properties based on the book's status
+
+    // Update the color of the status element
     book.html.status.style.color = status.color;
 
-    
-    book.html.reserve.disabled = !status.canReserve; 
-    book.html.checkout.disabled = !status.canCheckout; 
-    book.html.checkin.disabled = !status.canCheckIn;
-    
-    book.html.reserve.style.backgroundColor = 'black';
-    book.html.checkout.style.backgroundColor = 'black';
-    book.html.checkin.style.backgroundColor = 'black';
+    // Update the reserve, checkout, and checkin actions
+    book.html.reserve.disabled = !status.canReserve; // Enable/disable reserve button
+    book.html.checkout.disabled = !status.canCheckout; // Enable/disable checkout button
+    book.html.checkin.disabled = !status.canCheckIn; // Enable/disable checkin button
 });
